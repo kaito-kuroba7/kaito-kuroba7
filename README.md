@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @kaito-kuroba7
 - 👀 I’m interested in IT
-- 🌱 I’m currently learning Java
+- 🌱 I’m currently learning Java Web Spirngboot
 
 
 <!---
