@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题</title>
+</head>
+<!-- 以下是网页主体　以下はホームページ -->
+<body>
+    <!-- 标签加粗 ラベルが太くなります-->
+    <strong>网页</strong>
+    <!-- タイトルと文字内容 -->
+    <h1>kkkkkk</h1>
+    <h2>asdasdsad</h2>
+    <p>桜令嬢</p>
+    <!-- 強制改行　きょうせいかいぎょう -->
+    <br>
+    <!-- 水平線 -->
+    <hr>
+    <!-- b strong加粗 u insアンダーライン i em倾斜 s del删除线　線を消します -->
+    <u>私は君を大好きだ</u>
+     <!--alt テキストを置き換え  ../上に戻れ-->
+    <br><img src="./1.png" alt="加载错误"width="200">
+    <!-- オーディオとヴィデオがコントロール -->
+    <audio src="./ヨルシカ (Yorushika) - 老人と海 (老人与海).ogg" controls loop></audio>
+    <br><audio src="./Chris James - Close to the Fire.flac" controls loop></audio>
+    <audio src="./yama (ヤマ) - 春を告げる (宣告春天).flac" controls loop></audio>
+    <br><video src="./蜗牛.. - 【1080P官摄】神仙歌声！林俊杰《起风了》青岛完整版。_0129ZijW3N2f.mp4" width="400"controls muted autoplay></video>
+    <!-- トランジション -->
+    <br><a href="./サブページ.html" target="_blank">トランジション</a>
+    <!-- フォーム例 -->
+    <form action="/submit" method="post">
+        <label for="username">用户名:</label>
+        <!-- placeholderはtextにヒントを入れる -->
+        <input type="text" id="username" name="username" placeholder="请输入"><br>
+      
+        <label for="gender">性别:</label>
+        <input type="radio" name="gender" value="male" checked> 男
+        <input type="radio" name="gender" value="female"> 女<br>
+      
+        <label for="hobby">爱好:</label>
+        <input type="checkbox" name="hobby" value="reading"> 阅读
+        <input type="checkbox" name="hobby" value="music"> 音乐<br>
+
+        <label for="file">上传文件:</label>
+        <input type="file" multiple><br>
+
+        <!-- selectedはでフォルト選択 -->
+        <label for="city">城市:</label>
+        <select name="city">
+          <option value="beijing">北京</option>
+          <option value="shanghai">上海</option>
+          <option value="guangzhou" selected>广州</option>
+        </select><br>
+        <label for="message">留言:</label><br>
+        <textarea name="message" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+      </form>
+      <!-- ほかのラベル名 -->
+      <header>网页头部</header>
+      <nav>网页导航</nav>
+      <footer>网页底部</footer>
+      <aside>网页侧边栏</aside>
+      <section>网页区块</section>
+      <article>网页文章</article>
+</body>
+</html>
