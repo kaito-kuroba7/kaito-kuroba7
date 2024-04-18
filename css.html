@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 外部スタイル -->
+    <link rel="stylesheet" href="./my.css">
+    <!-- 内部スタイル -->
+    <style>
+        /* アスタリスク号すべでのラベルに対応します */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            color: red;
+            font-size: 30px;
+            background-color: aqua;
+            width: 300px;
+            height: 100px;
+            text-indent: 2em;
+            /* text-align: center; */
+            text-decoration: underline;
+        }
+        /* プロパティ選択器 */
+        p[align=center]{
+            color: cornflowerblue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>hello</p>
+    <strong>lllll</strong>
+    <p align="right">hello</p>
+    <!-- 一般には使われず、メンテナンスが難しい -->
+    <h1 style="color: pink;">面白い</h1>
+    <!-- いかに選択器を示します　ラベル　クラス　アイデ -->
+    <h2>やばい</h2>
+    <h1 class="hh size">あれ</h1>
+    <h1 id="hhh">化物</h1>
+    <!-- サブ選択器　スタイルはサブセレクタでのみ動作し、主セレクタでは動作しません -->
+    <h2><span>やばい</span></h2>
+    <a href="./サブページ.html"target="_blank">トランジション</a>
+    <!-- <a href="#"><img src="./1.jpg" alt=""></a> -->
+    <!-- .style列举的emmet语法 -->
+    <!-- div>p div+p ul>li*3 -->
+    <!-- ul>li{111}*3 ul>li{$}*3 -->
+    <!-- 行内标签例如span设置宽高不生效，只对背景及字体大小有关 -->
+    <!-- 行内块如img input加宽高生效 -->
+    <h4 class="hh4">ありがとうございます<br>続く</h4>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
