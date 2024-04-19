@@ -1,0 +1,67 @@
+strong{
+    color: darkblue;
+}
+h2,h3{
+    color: brown;
+    text-decoration: none;
+    text-shadow: blue 6px -6px 6px,yellow 6px -6px 6px;
+}
+/* サブ */
+h2>span{
+    color: darkorange;
+    font-size: 100px;
+}
+.hh{
+    color: skyblue;
+    line-height: 1.5;
+}
+.size{
+    font-size: 50px;
+    font-weight: 600;
+    font-style: italic;
+    /* sans-serif serif monospace */
+    font-family:'Courier New', Courier, monospace;
+    /* font: italic 600 70px 宋体; */
+}
+#hhh{
+    color: green;
+    background-color: brown;
+}
+/*　アンダーラインを消します */
+a{
+    width: 400px;
+    height: 300px;
+    color:yellow;
+    /* 下線が削除します */
+    text-decoration: none;
+    background-color: aqua;
+    background-image: url(./1.jpg);
+    display: inline-block;
+    /* 位置をコントロール */
+    text-align: center;
+    line-height: 300px;
+}
+/* 伪类：擬似クラス */
+a:hover{
+    color: red;
+    background-color: green;
+    background-image: url(./1.png);
+}
+/* 伪元素：擬似エレメント */
+h4.hh4::first-letter{
+    color: red;
+}
+h4.hh4::before{
+    content: "hello";
+}
+h4.hh4::after{
+    content: "world";
+}
+h4.hh4::first-line{
+    color: orange;
+}
+/* 結構擬似クラス */
+/* li:last-child li:first-child */
+li:nth-child(2){
+    background-color: purple;
+}
