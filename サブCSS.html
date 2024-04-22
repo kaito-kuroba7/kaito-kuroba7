@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サブＣＳＳ</title>
+    <link rel="stylesheet" href="./サブCSS.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        div{
+            color: blue;
+        }
+        /* 優先順位 */
+        body{
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">这是个div</div>
+    <div class="dd">转换行内</div>
+    <!-- 継承性 -->
+    <!-- 继承里面谁高，哪个父级最高，哪个选择器生效 -->
+    <div>
+        <span>hello</span>
+    </div>
+    <!-- 文字图片环绕 -->
+    <p>
+        <img class="i1" src="./1.jpg" alt="false" width="200">
+        初めまして、劉ともします。
+        <img src="./1.png" alt="false" class="i2" width="200">
+    </p>
+    <!-- 导航栏：ガイドライン -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+            <li><a href="#">测试</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
