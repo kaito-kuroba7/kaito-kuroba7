@@ -1,0 +1,78 @@
+.d1{
+    width: 400px;
+    height: 300px;
+    background-color: rgba(0, 0.5, 0, 0.5);
+    background-image: url(./1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background: red url(./1.png) no-repeat center; */
+}
+.dd{
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+    /* 以下は行内要素コンバージョンです ps:inline block inline-block; */
+    display: inline;
+}
+/* 文字で囲みます */
+/* 使用block进行块转换会有空隙 */
+/* clear:both 清除左右浮动影响 */
+.i1{
+    float: left;
+    margin-right: 15px;
+}
+.i2{
+    float: left;
+}
+/* ガイドライン制定 */
+.nav{
+    margin: 50px auto;
+    width: 640px;
+    height: 50px;
+    background-color: #ffc0cb;
+
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+}
+.nav li{
+    float: left;
+}
+.nav li a{
+    width: 80px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.nav li a:hover{
+    background-color: #008000;
+}
+/* 清除浮动:父元素设置*/
+p{
+    overflow: hidden;
+}
+/* 清除浮动法：单伪元素 */
+.clearfix::after{
+    content: '';
+    /* 擬似エレメント増加には行内要素です、だから… */
+    display: block;
+    clear: both;
+    /* 为了兼容性 */
+    height: 0;
+    visibility: hidden;
+
+}
+/* 双伪元素清除法 */
+/* .clearfix::before,.clearfix::after{
+        content: '';
+        display: table;
+}
+.clearfix::after{
+        clear: both;
+} */
