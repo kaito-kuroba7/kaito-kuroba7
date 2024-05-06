@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE-快速入门</title>
+    <script src="js/vue.js"></script>
+    <!-- <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app a{
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        #app a:hover{
+            border-bottom: 2px solid blue;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="url">
+        {{url}}
+        <p>{{message}}</p>
+        <a v-bind:href="url">クリック</a><br>
+        <input type="button" value="点我一下" v-on:click="handle()">
+        <!-- v-for -->
+        <div v-for="(addr,index) in addrs">{{index+1}}:{{addr}}</div>
+
+    </div>
+    <div id="app-2">
+  <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+    </div>
+    <div id="app-3">
+        <!-- v-show只是隐藏，不是判断 -->
+        <input type="text" v-model="age">为：
+        <span v-if="age <=35">年轻人</span>
+        <span v-else-if="age >35 && age<60">中年人</span>
+        <span v-else>老年人</span>
+    </div>
+
+    <!-- 综合案例 -->
+    <div id="app-4">
+        <table border="1" cellspacing="0" width="60%">
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>成绩</th>
+                <th>等级</th>
+            </tr>
+            <tr align="center" v-for="(
+                user,index) in users">
+                <td>{{index+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>
+                    <span v-if="user.gender ==1">男</span>
+                    <span v-else>女</span>
+                </td>
+                <td>{{user.score}}</td>
+                <td>
+                    <span v-if="user.score >=85">优秀</span>
+                    <span v-else-if="user.score >=60 && user.score<85">及格</span>
+                    <span style="color: red;" v-else>不及格</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data: {
+            url:"https://www.baidu.com",
+            addrs:["北京","上海","成都"],
+            message:'空'
+        },
+        methods: {
+            handle:function(){
+                alert("おめでとう！！！")
+            }
+        },
+        // 生命周期 自动加载
+        mounted () {
+            alert("Vue挂载完成，发送请求")
+        },
+        // 事件监听
+        watch: {
+            url:function(newVal,oldVal){
+                alert('変化する',newVal);
+                this.message= new Date().toLocaleString()
+            }
+        }
+    })
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString()
+        }
+    })
+    var app3 = new Vue({
+        el: '#app-3',
+        data:{
+            age:60
+        }
+    })
+    var app4 = new Vue({
+        el:'#app-4',
+        data:{
+            users:[{
+                name:"高橋",
+                age:20,
+                gender:2,
+                score:99
+            },{
+                name:"福山",
+                age:40,
+                gender:1,
+                score:50
+            },{
+                name:"石川",
+                age:60,
+                gender:1,
+                score:70
+            }]
+        }
+    })
+</script>
+</html>
